@@ -26,7 +26,6 @@ if(!fileSaveDir.exists())
 {
 fileSaveDir.mkdir();
 }
-System.out.println("hello");
 String prakash=null;
 for (Part part : request.getParts()) 
 {
