@@ -2,7 +2,7 @@
 
 This is a web aoplication with features to create excel file of backup of databases, converting pdf of web pages through its URLs.
 
-Below are links to the videos that demonstrates the application.
+Below are links to the videos that demonstrate the application.
 
 SQL Backup File convert to Excel Sheet
 https://youtu.be/tf53_9bOvLM
