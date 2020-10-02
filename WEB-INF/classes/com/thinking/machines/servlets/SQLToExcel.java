@@ -19,16 +19,13 @@ public void doPost(HttpServletRequest request,HttpServletResponse response)
 {
 try
 {
-String uploadPath = request.getServletContext().getRealPath("");
-System.out.println(uploadPath);        
+String uploadPath = request.getServletContext().getRealPath("");       
 String savePath = uploadPath+"WEB-INF"+File.separator+"SQLToPdf"+File.separator;
-System.out.println(savePath);
 File fileSaveDir = new File(savePath);
 if(!fileSaveDir.exists()) 
 {
 fileSaveDir.mkdir();
 }
-System.out.println("hello");
 String prakash=null;
 for (Part part : request.getParts()) 
 {
@@ -41,7 +38,6 @@ part.write(savePath + File.separator + fileName);
 
 String filePath=savePath+prakash;
 String dbName=prakash.split("\\.")[0];
-System.out.println(dbName);
 String dbUserName="prakash";
 String dbPassword="prakash";
 String[] executeCmd = new String[]{"mysql", "--user=" + dbUserName, "--password=" + dbPassword, dbName,"-e", " source "+filePath};
@@ -77,7 +73,6 @@ System.out.println(processComplete);
 if (processComplete == 0) 
 {  
 System.out.println("Backup restored successfully");
-System.out.println("prakash :)");  
 } 
 else
 {  
